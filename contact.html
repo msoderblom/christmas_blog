@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dog - Blog</title>
+  </head>
+  <body>
+    <header id="top">
+      <nav>
+        <ul>
+          <li><a href="./">Hem</a></li>
+          <li><a href="./contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <h1>Julpyssel & recept</h1>
+    </header>
+
+    <main>
+      <h1>Kontakta Jultomten</h1>
+      <section>
+        <h2>Kontaktuppgifter</h2>
+
+        <address>
+          Email:
+          <a href="mailto:soderblom.matilda@gmail.com">tomten@nordpolen.com</a
+          ><br />
+          Norpolen 1 <br />
+          Telefon: <a href="tel:+46735567539">0735567539</a>
+        </address>
+        <p>Tel: <a href="tel:1-510-432-1098">1-510-432-1098</a></p>
+      </section>
+      <section>
+        <h2>Skicka in din önskelista till tomten</h2>
+        <!-- Kontaktformulär -->
+        <form action="https://formspree.io/xqkklrgj" method="POST">
+          <label for="name"
+            >Namn
+            <input
+              type="text"
+              name="First Name"
+              id="name"
+              required
+              placeholder="Ditt namn..."
+            />
+          </label>
+          <br /><br />
+          <label for="email"
+            >E-mail
+            <input
+              type="email"
+              name="Email Address"
+              id="email"
+              required
+              placeholder="Din e-mail..."
+            />
+          </label>
+          <br /><br />
+          <label for="message"
+            >Din önskelista
+            <br />
+            <textarea name="Text Message" id="message" cols="30" rows="5">
+Jag önskar mig...</textarea
+            >
+          </label>
+          <br />
+          <button type="submit">Skicka</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <a href="#top">Go to top</a>
+    </footer>
+  </body>
+</html>
