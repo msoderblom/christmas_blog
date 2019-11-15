@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "The Perfect Christmas";
+  src: url("fonts/ThePerfectChristmas.woff2") format("woff2"),
+    url("fonts/ThePerfectChristmas.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Little Santa Flake";
+  src: url("fonts/LittleSantaFlake.woff2") format("woff2"),
+    url("fonts/LittleSantaFlake.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background: #146b3a;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  flex-basis: 30%;
+}
+
+nav li {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+aside {
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+section {
+  padding: 20px;
+}
+
+h1 {
+  /* font-family: "Amatic SC", cursive; */
+  font-family: "The Perfect Christmas", cursive;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  color: #bb2528;
+  margin: 0;
+}
+h2 {
+  font-family: "Little Santa Flake";
+  font-weight: normal;
+  font-style: normal;
+}
