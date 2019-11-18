@@ -13,24 +13,44 @@
   font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
-
-body {
+* {
   box-sizing: border-box;
+}
+body {
   margin: 0;
   padding: 0;
-}
-a {
-  text-decoration: none;
-  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  background: linear-gradient(-45deg, #146b3a, #165b33);
 }
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(#bb2528, #ea4630);
 }
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 nav {
   display: flex;
   justify-content: center;
   background: #146b3a;
+  padding: 15px 0 10px 0;
 }
 nav ul {
   list-style: none;
@@ -38,23 +58,63 @@ nav ul {
   justify-content: space-around;
   padding: 0;
   flex-basis: 30%;
+  margin: 0;
 }
 
 nav li {
   flex-basis: 50%;
   text-align: center;
+  line-height: 1;
 }
 
 aside {
   padding: 20px;
+  flex: 1;
+  background: linear-gradient(-45deg, #ea4630, #bb2528);
+  border-radius: 15px;
+  height: fit-content;
 }
 
 main {
+  margin: 150px auto;
+  max-width: 1200px;
+}
+#main-wrapper-home,
+#contact-section {
   display: flex;
   justify-content: space-around;
 }
+#contact-section aside {
+  padding-top: 0;
+}
+#main-wrapper-contact {
+  margin-top: 150px;
+}
+#contact-section {
+  padding-top: 0;
+}
 section {
   padding: 20px;
+}
+#article-section {
+  flex: 4;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+#article-section h2 {
+  margin-top: 0;
+}
+article {
+  background: linear-gradient(-45deg, #ea4630, #bb2528);
+  padding: 25px;
+  border-radius: 15px;
+}
+article + article {
+  margin-top: 20px;
+}
+
+#main-wrapper-contact h2 {
+  margin: 0;
 }
 
 h1 {
@@ -65,11 +125,93 @@ h1 {
   font-size: 4rem;
   width: 100%;
   text-align: center;
-  color: #bb2528;
+  color: white;
   margin: 0;
+  line-height: 1.2;
 }
 h2 {
-  font-family: "Little Santa Flake";
+  /* font-family: "Little Santa Flake";
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; */
+  /* font-family: "The Perfect Christmas", cursive;
+  font-weight: normal;
+  font-style: normal; */
+  font-family: "Merienda", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+}
+aside h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-family: "Merienda", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+aside ol,
+aside ul {
+  padding-left: 15px;
+}
+
+/* Kontakt */
+
+#main-wrapper-contact form {
+  background: linear-gradient(-45deg, #ea4630, #bb2528);
+  padding: 25px;
+  border-radius: 15px;
+  flex: 2;
+}
+#main-wrapper-contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form h3,
+#main-wrapper-contact aside h3 {
+  margin-top: 0;
+}
+fieldset {
+  border-color: white;
+  border-radius: 15px;
+}
+#main-wrapper-contact label {
+  display: block;
+  width: 100%;
+}
+#main-wrapper-contact input {
+  box-sizing: border-box;
+
+  border-radius: 15px;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  display: block;
+}
+#main-wrapper-contact button {
+  display: block;
+  background: white;
+  border: none;
+  color: #bb2528;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+#main-wrapper-contact aside {
+  flex: 1;
+  margin-right: 5%;
+  padding: 25px;
+}
+#main-wrapper-contact aside a {
+  color: white;
+}
+#contact-section {
+  justify-content: space-between;
 }
