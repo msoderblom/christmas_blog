@@ -5,13 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Little Santa Flake";
-  src: url("fonts/LittleSantaFlake.woff2") format("woff2"),
-    url("fonts/LittleSantaFlake.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 * {
   box-sizing: border-box;
@@ -38,11 +31,14 @@ nav a {
   color: white;
   text-transform: uppercase;
 }
+.current_link {
+  font-weight: bold;
+}
 img {
   display: block;
   max-width: 100%;
   width: 100%;
-  height: 300px;
+  height: 50vw;
   object-fit: cover;
 }
 
@@ -65,43 +61,39 @@ nav li {
   flex-basis: 50%;
   text-align: center;
   line-height: 1;
+  padding: 0 4% 0 4%;
 }
 
 aside {
   padding: 20px;
-  flex: 1;
+  margin: 3%;
   background: linear-gradient(-45deg, #ea4630, #bb2528);
   border-radius: 15px;
   height: fit-content;
 }
 
 main {
-  margin: 150px auto;
+  margin: 120px auto;
   max-width: 1200px;
 }
-#main-wrapper-home,
-#contact-section {
-  display: flex;
-  justify-content: space-around;
-}
-#contact-section aside {
+
+.homepage aside {
   padding-top: 0;
 }
-#main-wrapper-contact {
+.homepage aside h2 {
+  padding-top: 20px;
+}
+.homepage {
   margin-top: 150px;
 }
-#contact-section {
-  padding-top: 0;
+.homepage section {
+  padding: 0 3% 0 3%;
 }
 section {
   padding: 20px;
 }
-#article-section {
-  flex: 4;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-#article-section h2 {
+
+.homepage section h2 {
   margin-top: 0;
 }
 article {
@@ -113,12 +105,7 @@ article + article {
   margin-top: 20px;
 }
 
-#main-wrapper-contact h2 {
-  margin: 0;
-}
-
 h1 {
-  /* font-family: "Amatic SC", cursive; */
   font-family: "The Perfect Christmas", cursive;
   font-weight: normal;
   font-style: normal;
@@ -130,15 +117,15 @@ h1 {
   line-height: 1.2;
 }
 h2 {
-  /* font-family: "Little Santa Flake";
-  font-weight: normal;
-  font-style: normal; */
-  /* font-family: "The Perfect Christmas", cursive;
-  font-weight: normal;
-  font-style: normal; */
   font-family: "Merienda", cursive;
   font-weight: 700;
   font-size: 2rem;
+}
+h3 {
+  margin-top: 0;
+}
+h4 {
+  font-size: 1.3rem;
 }
 aside h2 {
   font-size: 1.6rem;
@@ -153,40 +140,72 @@ aside ul {
   padding-left: 15px;
 }
 
-/* Kontakt */
+td,
+th,
+caption {
+  border: 1px solid white;
+  padding: 5px;
+}
+caption {
+  border-bottom: none;
+}
 
-#main-wrapper-contact form {
+th {
+  background: white;
+  color: #bb2528;
+}
+th + th {
+  border-left-color: #bb2528;
+  border-left-width: 2px;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+footer {
+  padding: 25px;
+  border-top: 1px solid white;
+}
+
+/* contact page */
+.contact-page h2 {
+  margin: 0;
+}
+
+.contact-page form {
   background: linear-gradient(-45deg, #ea4630, #bb2528);
   padding: 25px;
   border-radius: 15px;
   flex: 2;
 }
-#main-wrapper-contact h2 {
+.contact-page h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 form h3,
-#main-wrapper-contact aside h3 {
+.contact-page aside h3 {
   margin-top: 0;
 }
 fieldset {
   border-color: white;
   border-radius: 15px;
 }
-#main-wrapper-contact label {
+label {
   display: block;
   width: 100%;
 }
-#main-wrapper-contact input {
-  box-sizing: border-box;
-
+input {
   border-radius: 15px;
   border: none;
   padding: 5px;
   width: 100%;
   display: block;
 }
-#main-wrapper-contact button {
+button {
   display: block;
   background: white;
   border: none;
@@ -198,20 +217,52 @@ fieldset {
   border-radius: 15px;
 }
 textarea {
-  box-sizing: border-box;
   width: 100%;
   border: none;
   border-radius: 15px;
   padding: 10px;
 }
-#main-wrapper-contact aside {
+.contact-page aside {
   flex: 1;
-  margin-right: 5%;
+  margin: 0 0 20px 0;
   padding: 25px;
 }
-#main-wrapper-contact aside a {
+address a {
   color: white;
 }
-#contact-section {
+.contact-page section {
   justify-content: space-between;
+}
+
+@media (min-width: 800px) {
+  .contact-page h2 {
+    flex: 1 1 100%;
+  }
+  table {
+    width: 70%;
+  }
+  aside {
+    flex: 1;
+  }
+  .homepage section {
+    flex: 4;
+    padding: 0 20px 0 20px;
+  }
+  .homepage aside {
+    margin-top: 0;
+  }
+  .homepage,
+  .contact-page section {
+    display: flex;
+    justify-content: space-around;
+  }
+  img {
+    height: 300px;
+  }
+  .contact-page aside {
+    margin-right: 5%;
+  }
+  .contact-page section {
+    flex-wrap: wrap;
+  }
 }
